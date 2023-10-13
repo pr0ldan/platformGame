@@ -7,6 +7,13 @@ using TMPro;
 public class PlayerManager : MonoBehaviour
 {  
     public GameObject pauseMenuScreen;
+
+    public static Vector2 lastCheckpointPos = new Vector2(-7, 0);
+
+    private void Awake() {
+        GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckpointPos;
+    }
+
     public void PauseGame()
     {
         Time.timeScale = 0;
