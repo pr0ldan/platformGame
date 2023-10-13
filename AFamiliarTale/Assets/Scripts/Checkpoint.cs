@@ -8,6 +8,7 @@ public class Checkpoint : MonoBehaviour
         if(collision.transform.tag == "Player")
         {
             PlayerManager.lastCheckpointPos = transform.position;
+            GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 }
