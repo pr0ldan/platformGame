@@ -7,10 +7,12 @@ using TMPro;
 public class PlayerManager : MonoBehaviour
 {  
     public GameObject pauseMenuScreen;
-
+    public static bool isGameOver;
+    public GameObject gameOverScreen;
     public static Vector2 lastCheckpointPos = new Vector2(-7, 0);
 
     private void Awake() {
+        isGameOver = false;
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckpointPos;
     }
 
@@ -26,5 +28,11 @@ public class PlayerManager : MonoBehaviour
 
     public void GotToMainMenu() {
         SceneManager.LoadScene("Menu");
+    }
+
+    void Update() {
+        if(isGameOver) {
+            gameOverScreen.SetActive(true);
+        }
     }
 }
