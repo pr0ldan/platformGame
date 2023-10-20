@@ -8,6 +8,7 @@ public class PlayerCollision : MonoBehaviour
         if(collision.transform.tag == "End") {
             PlayerManager.isGameOver = true;
             gameObject.SetActive(false);
+            PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
         }
     }
 }
