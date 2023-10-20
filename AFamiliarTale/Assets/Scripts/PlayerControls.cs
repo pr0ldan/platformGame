@@ -44,6 +44,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""4f2dab76-3267-4a9b-b497-c8106ef574aa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -101,6 +110,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f61d61b4-6be7-4381-a0c3-0fdfff03fb48"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -111,6 +131,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Land = asset.FindActionMap("Land", throwIfNotFound: true);
         m_Land_Move = m_Land.FindAction("Move", throwIfNotFound: true);
         m_Land_Jump = m_Land.FindAction("Jump", throwIfNotFound: true);
+        m_Land_Shoot = m_Land.FindAction("Shoot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -174,12 +195,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private List<ILandActions> m_LandActionsCallbackInterfaces = new List<ILandActions>();
     private readonly InputAction m_Land_Move;
     private readonly InputAction m_Land_Jump;
+    private readonly InputAction m_Land_Shoot;
     public struct LandActions
     {
         private @PlayerControls m_Wrapper;
         public LandActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Land_Move;
         public InputAction @Jump => m_Wrapper.m_Land_Jump;
+        public InputAction @Shoot => m_Wrapper.m_Land_Shoot;
         public InputActionMap Get() { return m_Wrapper.m_Land; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -195,6 +218,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
         }
 
         private void UnregisterCallbacks(ILandActions instance)
@@ -205,6 +231,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
         }
 
         public void RemoveCallbacks(ILandActions instance)
@@ -226,5 +255,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
     }
 }
