@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TutorialMovement : MonoBehaviour
+public class TutorialPlayer : MonoBehaviour
 {
     float timePassed = 0f;
+
     void Update()
     {
         timePassed += Time.deltaTime;    
