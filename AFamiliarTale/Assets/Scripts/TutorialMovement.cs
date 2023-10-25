@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class TutorialMovement : MonoBehaviour
 {
-    //facing right or left
-    bool faceRight = true;
-
-    void Start()
+    float timePassed = 0f;
+    void Update()
     {
-            Invoke("Flip", 2);
+        timePassed += Time.deltaTime;    
+        if(timePassed > 2f) //every 2 seconds
+        {
+            Flip();
+            timePassed = 0f;
+        }
     }
+
+    //flip character
     void Flip()
     {
-        faceRight = !faceRight;
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
     }
 }
