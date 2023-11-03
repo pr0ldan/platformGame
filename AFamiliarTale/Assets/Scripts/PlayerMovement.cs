@@ -39,13 +39,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //check if on ground
         onGround = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
         //move player
         playerRB.velocity = new Vector2(direction * speed + Time.fixedDeltaTime, playerRB.velocity.y);
+
+        UpdateAnimation();
+    }
+
+    private void UpdateAnimation()
+    {
         animator.SetFloat("speed", Mathf.Abs(direction));
 
-        if((faceRight && direction < 0) || (!faceRight && direction > 0)) //flip character
+        if ((faceRight && direction < 0) || (!faceRight && direction > 0)) //flip character
         {
             Flip();
         }
@@ -59,7 +66,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isGrounded", true);
         }
     }
-
     void Flip()
     {
         faceRight = !faceRight;

@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject levelCompleteScreen;
     public static bool isGameOver;
     public static bool isLevelComplete;
-    public static Vector2 lastCheckpointPos = new Vector2(-13, -4.5f);
+    public static Vector2 lastCheckpointPos = new Vector2(-13, -4.993932f);
 
     private void Awake() {
         isGameOver = false;
