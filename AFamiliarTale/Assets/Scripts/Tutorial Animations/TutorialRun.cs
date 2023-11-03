@@ -12,16 +12,34 @@ public class TutorialRun : MonoBehaviour
     void Update()
     {
         timePassed += Time.deltaTime;
-        if (timePassed > 2f) //every 2 seconds
+        if (timePassed > 1f && timePassed < 3f) //1 second: press right
         {
-            right.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
-            left.GetComponent<SpriteRenderer>().color = new Color32(180, 180, 180, 255);
+            Press(right, true);
         }
-        if (timePassed > 4f) //revert back
+        else if (timePassed > 3f && timePassed < 4f) //3 seconds: stop press right
         {
-            right.GetComponent<SpriteRenderer>().color = new Color32(180, 180, 180, 255);
-            left.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
-            timePassed = 0f;
+            Press(right, false);
+        }
+        else if (timePassed > 4f && timePassed < 6f) //4 seconds: press left
+        {
+            Press(left, true);
+        }
+        else if (timePassed > 6f) //6 seconds: stop press left
+        {
+            Press(left, false);
+            timePassed = 0f; //reset
+        }
+    }
+
+    void Press(GameObject btn, bool press)
+    {
+        if(press)
+        {
+            btn.GetComponent<SpriteRenderer>().color = new Color32(180, 180, 180, 255);
+        }
+        else
+        {
+            btn.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
         }
     }
 }
