@@ -29,8 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
         controls.Land.Jump.performed += context => 
         {
-            if(onGround) {
-                playerRB.velocity = new Vector2(playerRB.velocity.x, jumpForce);
+            if (onGround) //prevent double-jump
+            {
+                playerRB.velocity = new Vector2(playerRB.velocity.x, jumpForce); //jump
             }
         };
     }
@@ -44,12 +45,20 @@ public class PlayerMovement : MonoBehaviour
         playerRB.velocity = new Vector2(direction * speed + Time.fixedDeltaTime, playerRB.velocity.y);
         animator.SetFloat("speed", Mathf.Abs(direction));
 
-        if((faceRight && direction < 0) || (!faceRight && direction > 0)) {
+        if((faceRight && direction < 0) || (!faceRight && direction > 0)) //flip character
+        {
             Flip();
         }
 
+        if (playerRB.velocity.y > .1f || playerRB.velocity.y < -.1f) //jump
+        {
+            animator.SetBool("isGrounded", false);
+        }
+        else
+        {
+            animator.SetBool("isGrounded", true);
+        }
     }
-
 
     void Flip()
     {
