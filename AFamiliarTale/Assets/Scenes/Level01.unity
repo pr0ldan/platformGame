@@ -2826,7 +2826,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.22, y: -1.61, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 865327628}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10862,6 +10862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 865327628}
+  - component: {fileID: 865327629}
   m_Layer: 0
   m_Name: Tutorial Signs
   m_TagString: Untagged
@@ -10887,6 +10888,20 @@ Transform:
   - {fileID: 663755041}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &865327629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865327627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde56cdb6505c9a44a10a4e3d8101e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {fileID: 1167336808}
+  right: {fileID: 1591863813}
 --- !u!1 &916266569
 GameObject:
   m_ObjectHideFlags: 0
@@ -12508,7 +12523,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1167336810}
   - component: {fileID: 1167336809}
-  - component: {fileID: 1167336811}
   m_Layer: 0
   m_Name: Left Arrow
   m_TagString: Untagged
@@ -12583,18 +12597,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 865327628}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1167336811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167336808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 937c66942d9c6b2458a9f836b0a405d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1175891999
 GameObject:
   m_ObjectHideFlags: 0
@@ -17779,7 +17781,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1591863814}
   - component: {fileID: 1591863815}
-  - component: {fileID: 1591863816}
   m_Layer: 0
   m_Name: Right Arrow
   m_TagString: Untagged
@@ -17854,18 +17855,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1591863816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591863813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde56cdb6505c9a44a10a4e3d8101e2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1602368791
 GameObject:
   m_ObjectHideFlags: 0
