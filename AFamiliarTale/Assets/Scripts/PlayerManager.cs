@@ -7,8 +7,10 @@ using TMPro;
 public class PlayerManager : MonoBehaviour
 {  
     public GameObject pauseMenuScreen;
-    public static bool isGameOver;
     public GameObject gameOverScreen;
+    public GameObject levelCompleteScreen;
+    public static bool isGameOver;
+    public static bool isLevelComplete;
     public static Vector2 lastCheckpointPos = new Vector2(-13, -4.5f);
 
     private void Awake() {
@@ -33,6 +35,10 @@ public class PlayerManager : MonoBehaviour
     void Update() {
         if(isGameOver) {
             gameOverScreen.SetActive(true);
+        }
+        else if (isLevelComplete)
+        {
+            levelCompleteScreen.SetActive(true);
         }
     }
 

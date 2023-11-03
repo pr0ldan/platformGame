@@ -5,8 +5,15 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.transform.tag == "End") {
-            PlayerManager.isGameOver = true;
+        if(collision.transform.tag == "End" || collision.transform.tag == "Trap") {
+            if (collision.transform.tag == "End")
+            {
+                PlayerManager.isLevelComplete = true;
+            }
+            else
+            {
+                PlayerManager.isGameOver = true;
+            }
             gameObject.SetActive(false);
             PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
         }
