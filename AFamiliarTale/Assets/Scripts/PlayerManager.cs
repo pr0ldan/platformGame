@@ -16,8 +16,12 @@ public class PlayerManager : MonoBehaviour
     public static int numberOfCoins;
     public TextMeshProUGUI coinsText;
 
+    public static int numberOfStars;
+    public TextMeshProUGUI starsText;
+
     private void Awake() {
         numberOfCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
+        numberOfStars = PlayerPrefs.GetInt("NumberOfStars", 0);
         isGameOver = false;
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckpointPos;
     }
@@ -39,6 +43,7 @@ public class PlayerManager : MonoBehaviour
     void Update() {
         //Debug.Log(numberOfCoins);
         coinsText.text = numberOfCoins.ToString();
+        starsText.text = numberOfStars.ToString();
 
         if(isGameOver) {
             gameOverScreen.SetActive(true);
