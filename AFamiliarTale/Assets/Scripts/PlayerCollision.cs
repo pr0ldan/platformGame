@@ -9,13 +9,14 @@ public class PlayerCollision : MonoBehaviour
             if (collision.transform.tag == "End")
             {
                 PlayerManager.isLevelComplete = true;
+                PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
             }
             else
             {
                 PlayerManager.isGameOver = true;
             }
             gameObject.SetActive(false);
-            PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
+            //PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
         }
     }
 }

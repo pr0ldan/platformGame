@@ -23,6 +23,7 @@ public class PlayerManager : MonoBehaviour
         numberOfCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
         numberOfStars = PlayerPrefs.GetInt("NumberOfStars", 0);
         isGameOver = false;
+        isLevelComplete = false;
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckpointPos;
     }
 
