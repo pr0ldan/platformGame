@@ -1857,7 +1857,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Charcter
+  m_text: 'Character
 
     Customization'
   m_isRightToLeft: 0
