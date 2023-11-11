@@ -13,11 +13,16 @@ public class PlayerManager : MonoBehaviour
     public static bool isLevelComplete;
     public static Vector2 lastCheckpointPos = new Vector2(-10.5f, -4.993932f);
 
+    public static bool isCustom;
+    public static bool isCustom2;
+
     public static int numberOfCoins;
     public TextMeshProUGUI coinsText;
 
     public static int numberOfStars;
     public TextMeshProUGUI starsText;
+
+    public GameObject custm, custm2;
 
     private void Awake() {
         numberOfCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
@@ -52,6 +57,17 @@ public class PlayerManager : MonoBehaviour
         else if (isLevelComplete)
         {
             levelCompleteScreen.SetActive(true);
+        }
+
+        if (isCustom) {
+            custm.SetActive(true);
+        }
+        else if (isCustom2) {
+            custm2.SetActive(true);
+        }
+        else {
+            custm.SetActive(false);
+            custm2.SetActive(false);
         }
     }
 

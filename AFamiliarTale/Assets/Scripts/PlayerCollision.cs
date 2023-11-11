@@ -9,7 +9,7 @@ public class PlayerCollision : MonoBehaviour
             if (collision.transform.tag == "End")
             {
                 PlayerManager.isLevelComplete = true;
-                PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
+                PlayerManager.lastCheckpointPos = new Vector2(0, 20);
             }
             else
             {

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1ae773e0cf24f4a8c9a34ddaedd7fa5e
+guid: 2ca5c3d24eaf84b2b8fa475ead1db628
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -147,70 +147,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: witchJump_0
-      rect:
-        serializedVersion: 2
-        x: 2739
-        y: 858
-        width: 426
-        height: 690
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eeab6cfdd95ef466295f9093272b4e33
-      internalID: 179113611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witchJump_1
-      rect:
-        serializedVersion: 2
-        x: 3201
-        y: 858
-        width: 426
-        height: 690
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13296251517234bdd98dad42dc98f8c7
-      internalID: 1401024796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witchJump_2
-      rect:
-        serializedVersion: 2
-        x: 3700
-        y: 858
-        width: 426
-        height: 697
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83ec69b3ee4184bf9b3b765cc3e204fc
-      internalID: -1860465433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -221,10 +158,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      witchJump_0: 179113611
-      witchJump_1: 1401024796
-      witchJump_2: -1860465433
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
