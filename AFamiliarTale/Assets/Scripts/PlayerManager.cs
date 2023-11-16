@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject levelCompleteScreen;
     public static bool isGameOver;
     public static bool isLevelComplete;
-    public static Vector2 lastCheckpointPos = new Vector2(-10.5f, -4.993932f);
+    public static Vector2 lastCheckpointPos = new Vector2(-12f, -5f);
 
     public static bool isCustom;
     public static bool isCustom2;
@@ -27,6 +27,10 @@ public class PlayerManager : MonoBehaviour
     public static AudioSource [] collectSounds;
     public AudioSource winSound;
     public AudioSource loseSound;
+    public AudioSource pauseSound;
+    public AudioSource resumeSound;
+    public AudioSource selectSound;
+    public AudioSource music;
 
     private bool playWinSound = true;
     private bool playLoseSound = true;
@@ -42,17 +46,45 @@ public class PlayerManager : MonoBehaviour
 
     public void PauseGame()
     {
+        music.Pause();
+        pauseSound.Play();
+
         Time.timeScale = 0;
         pauseMenuScreen.SetActive(true);
     }
-    public void ResumeGame() {
+    public void ResumeGame()
+    {
+        music.UnPause();
+        resumeSound.Play();
         Time.timeScale = 1;
         pauseMenuScreen.SetActive(false);
     }
 
-    public void GotToMainMenu() {
+    public void GotToMainMenu()
+    {
+        StartCoroutine(GotToMainMenu2());
+    }
+
+    IEnumerator GotToMainMenu2()
+    {
+        selectSound.Play();
+        yield return new WaitForSecondsRealtime(.13f);
         SceneManager.LoadScene("Menu");
     }
+
+    public void ReplayLevel()
+    {
+        StartCoroutine(ReplayLevel2());
+    }
+
+    IEnumerator ReplayLevel2()
+    {
+        selectSound.Play();
+        yield return new WaitForSecondsRealtime(.13f);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+    }
+
     public static void CoinSound()
     {
         collectSounds[0].Play();
@@ -74,6 +106,7 @@ public class PlayerManager : MonoBehaviour
                 loseSound.Play();
                 playLoseSound = false;
             }
+            music.Stop();
             gameOverScreen.SetActive(true);
         }
         else if (isLevelComplete)
@@ -96,10 +129,5 @@ public class PlayerManager : MonoBehaviour
             custm.SetActive(false);
             custm2.SetActive(false);
         }
-    }
-
-    public void ReplayLevel() {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1f;
     }
 }
