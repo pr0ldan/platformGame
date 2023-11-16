@@ -8,6 +8,7 @@ public class Stars : MonoBehaviour
         if(collision.transform.tag == "Player") {
             PlayerManager.numberOfStars = PlayerManager.numberOfStars + 3;
             PlayerPrefs.SetInt("NumberOfStars", PlayerManager.numberOfStars);
+            PlayerManager.StarSound();
             Destroy(gameObject);
         }
     }

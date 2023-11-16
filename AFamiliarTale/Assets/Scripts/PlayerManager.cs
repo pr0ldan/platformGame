@@ -24,12 +24,20 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject custm, custm2;
 
+    public static AudioSource [] collectSounds;
+    public AudioSource winSound;
+    public AudioSource loseSound;
+
+    private bool playWinSound = true;
+    private bool playLoseSound = true;
+
     private void Awake() {
         numberOfCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
         numberOfStars = PlayerPrefs.GetInt("NumberOfStars", 0);
         isGameOver = false;
         isLevelComplete = false;
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckpointPos;
+        collectSounds = GetComponents<AudioSource>();
     }
 
     public void PauseGame()
@@ -45,17 +53,36 @@ public class PlayerManager : MonoBehaviour
     public void GotToMainMenu() {
         SceneManager.LoadScene("Menu");
     }
+    public static void CoinSound()
+    {
+        collectSounds[0].Play();
+    }
+    public static void StarSound()
+    {
+        collectSounds[1].Play();
+    }
 
     void Update() {
         //Debug.Log(numberOfCoins);
         coinsText.text = numberOfCoins.ToString();
         starsText.text = numberOfStars.ToString();
 
-        if(isGameOver) {
+        if(isGameOver)
+        {
+            if(playLoseSound)
+            {
+                loseSound.Play();
+                playLoseSound = false;
+            }
             gameOverScreen.SetActive(true);
         }
         else if (isLevelComplete)
         {
+            if (playWinSound)
+            {
+                winSound.Play();
+                playWinSound = false;
+            }
             levelCompleteScreen.SetActive(true);
         }
 

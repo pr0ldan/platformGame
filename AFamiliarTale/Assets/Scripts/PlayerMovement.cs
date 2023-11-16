@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Rigidbody2D playerRB;
+    public Animator animator;
 
     PlayerControls controls;
     float direction = 0;
     public float speed = 400;
     public float jumpForce = 5;
+    float walkTime = 0f; //walk sound cooldown
+
+    bool faceRight = true; 
     bool onGround;
     public Transform groundCheck;
     public LayerMask groundLayer;
-    public Rigidbody2D playerRB;
-    public Animator animator;
 
-    //facing right or left
-    bool faceRight = true;
+    public AudioSource jumpSound;
+    public AudioSource walkSound;
 
     private void Awake() {
         controls = new PlayerControls();
@@ -32,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
             if (onGround) //prevent double-jump
             {
                 playerRB.velocity = new Vector2(playerRB.velocity.x, jumpForce); //jump
+                jumpSound.Play();
             }
         };
     }
@@ -44,6 +48,14 @@ public class PlayerMovement : MonoBehaviour
 
         //move player
         playerRB.velocity = new Vector2(direction * speed + Time.fixedDeltaTime, playerRB.velocity.y);
+
+        //walk sound
+        walkTime += Time.deltaTime;
+        if ((playerRB.velocity.x > .1f || playerRB.velocity.x < -.1f) && walkTime > 0.25f && onGround)
+        {
+            walkSound.Play();
+            walkTime = 0; //reset
+        }
 
         UpdateAnimation();
     }
