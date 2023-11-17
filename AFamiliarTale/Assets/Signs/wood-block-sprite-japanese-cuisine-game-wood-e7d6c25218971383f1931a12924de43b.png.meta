@@ -1,0 +1,373 @@
+fileFormatVersion: 2
+guid: 2aba28588bbf4fe4eaeebdb5ae750a65
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 907
+        width: 549
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b469baa89947f5439eae36b7b088819
+      internalID: 1376120722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_1
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 774
+        width: 747
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b77fe5a3c47ec40a7d6282361b0b28
+      internalID: -1263290104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 639
+        width: 942
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14eeed2a62ace44b998394d1626b26d
+      internalID: -1407100282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_3
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 494
+        width: 361
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f1c1d4a72f96f42b69ae011b9e894c
+      internalID: 1482871115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_4
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 399
+        width: 86
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7b4e883df405940b8a496e7c34243a
+      internalID: 1807369954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_5
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 190
+        width: 86
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45be8ad64a271b24198a7a0b34e20b83
+      internalID: -1760249346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_6
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 27
+        width: 86
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d122a7f4d2c64994fb25348f701e491b
+      internalID: 411768760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 354
+        width: 247
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7530e5f41c8847540aab44be23432c7c
+      internalID: 1169536424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_8
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 182
+        width: 143
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2641de715d076c14499a64df548f98b2
+      internalID: 204129998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_9
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 254
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1000ee40349a62f4692adf20989553be
+      internalID: 1571857897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_0: 1376120722
+      wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_1: -1263290104
+      wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_2: -1407100282
+      wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_3: 1482871115
+      wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_4: 1807369954
+      wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_5: -1760249346
+      wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_6: 411768760
+      wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_7: 1169536424
+      wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_8: 204129998
+      wood-block-sprite-japanese-cuisine-game-wood-e7d6c25218971383f1931a12924de43b_9: 1571857897
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
