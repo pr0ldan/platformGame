@@ -8,6 +8,8 @@ public class PlayerLife : MonoBehaviour
 	private Animator anim;
 	private int Life = 3;
 	private Rigidbody2D rb;
+
+	private PlayerManager playerManager;
 	
     // Start is called before the first frame update
     void Start()
@@ -27,15 +29,18 @@ public class PlayerLife : MonoBehaviour
 			}
 		}
 	}
-	
-	private void Die()
+
+    public void ReplayLevel()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+    }
+
+
+    private void Die()
 	{
-		//rb.bodyType = RigidbodyType2D.Static;
+		rb.bodyType = RigidbodyType2D.Static;
+		ReplayLevel();
 		anim.SetTrigger("death");
-	}
-	
-	private void RestartLevel()
-	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }
