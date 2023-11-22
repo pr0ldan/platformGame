@@ -11,6 +11,12 @@ public class NewBehaviourScript : MonoBehaviour
     }
     public void LoadLvl(int index) //index will pass level number(1, 2, ..., n)
     {
+        SceneManager.LoadScene(index);
+    }
+
+
+    public void LoadLevel(int index) //index will pass level number(1, 2, ..., n)
+    {
         StartCoroutine(LoadLvl2(index));
     }
     IEnumerator LoadLvl2(int index)

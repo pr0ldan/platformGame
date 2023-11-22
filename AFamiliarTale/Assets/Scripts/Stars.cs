@@ -5,7 +5,7 @@ using UnityEngine;
 public class Stars : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.transform.tag == "Player") {
+        if(collision.transform.tag == "Player") {           
             PlayerManager.numberOfStars = PlayerManager.numberOfStars + 3;
             PlayerPrefs.SetInt("NumberOfStars", PlayerManager.numberOfStars);
             PlayerManager.StarSound();
