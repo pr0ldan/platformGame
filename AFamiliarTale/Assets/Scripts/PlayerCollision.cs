@@ -16,7 +16,6 @@ public class PlayerCollision : MonoBehaviour
                 PlayerManager.isGameOver = true;
             }
             gameObject.SetActive(false);
-            //PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
         }
     }
 }
