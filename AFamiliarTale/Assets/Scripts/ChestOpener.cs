@@ -28,8 +28,6 @@ public class ChestOpener : MonoBehaviour
     }
 
     void OnTriggerExit2D(Collider2D collision) {
-        ChestClose.SetActive(true);
-        ChestOpen.SetActive(false);
         Destroy(Star);
     }
 }
