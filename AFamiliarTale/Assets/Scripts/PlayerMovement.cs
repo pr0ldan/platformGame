@@ -43,12 +43,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //check if fallen through pit
-        if(transform.position.y < -9.5)
-        {
-            PlayerManager.isGameOver = true; //game over
-            gameObject.SetActive(false);
-        }
+        // //check if fallen through pit
+        // if(transform.position.y < -9.5)
+        // {
+        //     PlayerManager.isGameOver = true; //game over
+        //     gameObject.SetActive(false);
+        // }
 
         //check if on ground
         onGround = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
