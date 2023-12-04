@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject levelCompleteScreen;
     public static bool isGameOver;
     public static bool isLevelComplete;
-    public static Vector2 lastCheckpointPos = new Vector2(116f, 20f);
+    public static Vector2 lastCheckpointPos = new Vector2(-12f, -5f);
 
     public static bool isCustom;
     public static bool isCustom2;
