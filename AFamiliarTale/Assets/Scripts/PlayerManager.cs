@@ -43,7 +43,6 @@ public class PlayerManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckpointPos;
         collectSounds = GetComponents<AudioSource>();
     }
-
     public void PauseGame()
     {
         music.Pause();
@@ -81,7 +80,7 @@ public class PlayerManager : MonoBehaviour
     {
         selectSound.Play();
         yield return new WaitForSecondsRealtime(.13f);
-        PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
+        PlayerManager.lastCheckpointPos = new Vector2(-12f, -5f);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }
