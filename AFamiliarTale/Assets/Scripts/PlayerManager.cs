@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject levelCompleteScreen;
     public static bool isGameOver;
     public static bool isLevelComplete;
-    public static Vector2 lastCheckpointPos = new Vector2(-12f, -5f);
+    public static Vector2 lastCheckpointPos = new Vector2(116f, 20f);
 
     public static bool isCustom;
     public static bool isCustom2;
@@ -69,6 +69,17 @@ public class PlayerManager : MonoBehaviour
         selectSound.Play();
         yield return new WaitForSecondsRealtime(.13f);
         SceneManager.LoadScene("Menu");
+    }
+    public void NextLevel()
+    {
+        StartCoroutine(NextLevel2());
+    }
+
+    IEnumerator NextLevel2()
+    {
+        selectSound.Play();
+        yield return new WaitForSecondsRealtime(.13f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ReplayLevel()
