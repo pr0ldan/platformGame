@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {  
     public GameObject pauseMenuScreen;
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
+
     public static bool isGameOver;
     public static bool isLevelComplete;
     public static Vector2 lastCheckpointPos = new Vector2(-12f, -5f);
@@ -128,6 +130,12 @@ public class PlayerManager : MonoBehaviour
                 playWinSound = false;
             }
             levelCompleteScreen.SetActive(true);
+
+            //update level progress
+            if (SceneManager.GetActiveScene().buildIndex + 1 > PlayerPrefs.GetInt("levelAt"))
+            {
+                PlayerPrefs.SetInt("levelAt", SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
 
         if (isCustom) {
