@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
 
     public static bool isGameOver;
     public static bool isLevelComplete;
-    public static Vector2 lastCheckpointPos = new Vector2(-12f, -5f);
+    public static Vector2 lastCheckpointPos = new Vector2(127f, 4f);
 
     public static bool isCustom;
     public static bool isCustom2;
