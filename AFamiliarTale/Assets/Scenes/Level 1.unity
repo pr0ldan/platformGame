@@ -1647,7 +1647,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.0053436956, y: -0.000018727786, z: 0.0035045797, w: 0.9999796}
   m_LocalPosition: {x: -11.2367, y: -2.1567, z: -0.0026}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.9820871}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.9820871}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1583521829}
@@ -1681,6 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b396a201a7e74c6f86e2e254edf6f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temp: 0
 --- !u!82 &238294725
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21901,6 +21902,7 @@ MonoBehaviour:
   pauseMenuScreen: {fileID: 1972257148}
   gameOverScreen: {fileID: 1512967598}
   levelCompleteScreen: {fileID: 613665511}
+  RemoveCoins: {fileID: 0}
   coinsText: {fileID: 1833340049}
   starsText: {fileID: 191579426}
   custm: {fileID: 1987677033}
