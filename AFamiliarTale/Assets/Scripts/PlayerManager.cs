@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {  
     public GameObject pauseMenuScreen;
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
+
     public static bool isGameOver;
     public static bool isLevelComplete;
     public static Vector2 lastCheckpointPos = new Vector2(-12f, -5f);
@@ -43,7 +45,6 @@ public class PlayerManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckpointPos;
         collectSounds = GetComponents<AudioSource>();
     }
-
     public void PauseGame()
     {
         music.Pause();
@@ -72,6 +73,17 @@ public class PlayerManager : MonoBehaviour
         PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
         SceneManager.LoadScene("Menu");
     }
+    public void NextLevel()
+    {
+        StartCoroutine(NextLevel2());
+    }
+
+    IEnumerator NextLevel2()
+    {
+        selectSound.Play();
+        yield return new WaitForSecondsRealtime(.13f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 
     public void ReplayLevel()
     {
@@ -82,6 +94,7 @@ public class PlayerManager : MonoBehaviour
     {
         selectSound.Play();
         yield return new WaitForSecondsRealtime(.13f);
+        PlayerManager.lastCheckpointPos = new Vector2(-12f, -5f);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }
@@ -118,6 +131,12 @@ public class PlayerManager : MonoBehaviour
             }
 
             levelCompleteScreen.SetActive(true);
+
+            //update level progress
+            if (SceneManager.GetActiveScene().buildIndex + 1 > PlayerPrefs.GetInt("levelAt"))
+            {
+                PlayerPrefs.SetInt("levelAt", SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
 
         if (isCustom) {
