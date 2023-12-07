@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject pauseMenuScreen;
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
+    public GameObject RemoveCoins;
 
     public static bool isGameOver;
     public static bool isLevelComplete;
@@ -118,7 +119,6 @@ public class PlayerManager : MonoBehaviour
                 loseSound.Play();
                 playLoseSound = false;
             }
-
             music.Stop();
             gameOverScreen.SetActive(true);
         }
@@ -130,6 +130,8 @@ public class PlayerManager : MonoBehaviour
                 playWinSound = false;
             }
 
+            PlayerPrefs.SetInt("NumberOfCoins", PlayerManager.numberOfCoins);
+            PlayerPrefs.Save();
             levelCompleteScreen.SetActive(true);
 
             //update level progress
