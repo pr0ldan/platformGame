@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 5;
     float walkTime = 0f; //walk sound cooldown
 
-    bool faceRight = true; 
+    public bool faceRight = true; 
     bool onGround;
     public Transform groundCheck;
     public LayerMask groundLayer;
