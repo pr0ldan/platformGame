@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject pauseMenuScreen;
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
+    public GameObject RemoveCoins;
 
     public static bool isGameOver;
     public static bool isLevelComplete;
@@ -39,7 +40,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake() {
         numberOfCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
-        numberOfStars = PlayerPrefs.GetInt("NumberOfStars", 0);
+
         isGameOver = false;
         isLevelComplete = false;
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckpointPos;
@@ -70,6 +71,7 @@ public class PlayerManager : MonoBehaviour
     {
         selectSound.Play();
         yield return new WaitForSecondsRealtime(.13f);
+        PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
         SceneManager.LoadScene("Menu");
     }
     public void NextLevel()
@@ -107,11 +109,9 @@ public class PlayerManager : MonoBehaviour
         collectSounds[1].Play();
     }
 
-    void Update() {
-        //Debug.Log(numberOfCoins);
+    public void Update() {
         coinsText.text = numberOfCoins.ToString();
-        starsText.text = numberOfStars.ToString();
-        
+
         if(isGameOver)
         {
             if(playLoseSound)
@@ -129,6 +129,9 @@ public class PlayerManager : MonoBehaviour
                 winSound.Play();
                 playWinSound = false;
             }
+
+            PlayerPrefs.SetInt("NumberOfCoins", PlayerManager.numberOfCoins);
+            PlayerPrefs.Save();
             levelCompleteScreen.SetActive(true);
 
             //update level progress
