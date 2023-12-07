@@ -7,6 +7,8 @@ TagManager:
   - End
   - Trap
   - Coin
+  - Enemy
+  - Turn
   layers:
   - Default
   - TransparentFX
