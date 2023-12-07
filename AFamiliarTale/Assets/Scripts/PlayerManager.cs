@@ -111,7 +111,7 @@ public class PlayerManager : MonoBehaviour
         //Debug.Log(numberOfCoins);
         coinsText.text = numberOfCoins.ToString();
         starsText.text = numberOfStars.ToString();
-
+        
         if(isGameOver)
         {
             if(playLoseSound)

@@ -1,46 +1,45 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class PlayerLife : MonoBehaviour
 {
-	private Animator anim;
-	private int Life = 3;
-	private Rigidbody2D rb;
+    public int currentHealth;
+    public TextMeshProUGUI healthText;
+    public Vector3 respawnPoint;
 
-	private PlayerManager playerManager;
-	
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-		anim = GetComponent<Animator>();
+        currentHealth = 3;
+        respawnPoint = PlayerManager.lastCheckpointPos;
     }
 
-	private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.CompareTag("Trap") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Enemy_proj"))
+		if (collision.gameObject.CompareTag("Trap") || collision.gameObject.CompareTag("Enemy"))
 		{
-			Life--;
-			if(Life <= 0)
-			{
-				Die();
-			}
-		}
-	}
+            currentHealth--;
+            if (currentHealth <= 0)
+            {
+                //gameObject.transform.tag = "End";
+                Destroy(gameObject);
+                PlayerPrefs.SetInt("NumberOfCoins", 0);
+                PlayerPrefs.SetInt("NumberOfStars", 0);
+                PlayerManager.isGameOver = true;
+            }
+            Update() ;
+            transform.position = respawnPoint;
 
-    public void ReplayLevel()
-    {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1f;
+        }
     }
 
-
-    private void Die()
-	{
-		rb.bodyType = RigidbodyType2D.Static;
-		ReplayLevel();
-		anim.SetTrigger("death");
-	}
+    private void Update()
+    {
+        healthText.SetText(currentHealth.ToString());
+        respawnPoint = PlayerManager.lastCheckpointPos;
+    }
 }
