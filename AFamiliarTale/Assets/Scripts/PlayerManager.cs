@@ -95,7 +95,6 @@ public class PlayerManager : MonoBehaviour
     {
         selectSound.Play();
         yield return new WaitForSecondsRealtime(.13f);
-        PlayerManager.lastCheckpointPos = new Vector2(-12f, -5f);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }
