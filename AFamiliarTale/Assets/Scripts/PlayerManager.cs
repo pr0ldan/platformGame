@@ -37,7 +37,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake() {
         numberOfCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
-        numberOfStars = PlayerPrefs.GetInt("NumberOfStars", 0);
+
         isGameOver = false;
         isLevelComplete = false;
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckpointPos;
@@ -69,6 +69,7 @@ public class PlayerManager : MonoBehaviour
     {
         selectSound.Play();
         yield return new WaitForSecondsRealtime(.13f);
+        PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
         SceneManager.LoadScene("Menu");
     }
 
@@ -81,7 +82,6 @@ public class PlayerManager : MonoBehaviour
     {
         selectSound.Play();
         yield return new WaitForSecondsRealtime(.13f);
-        PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }
@@ -95,10 +95,8 @@ public class PlayerManager : MonoBehaviour
         collectSounds[1].Play();
     }
 
-    void Update() {
-        //Debug.Log(numberOfCoins);
+    public void Update() {
         coinsText.text = numberOfCoins.ToString();
-        starsText.text = numberOfStars.ToString();
 
         if(isGameOver)
         {
@@ -107,6 +105,7 @@ public class PlayerManager : MonoBehaviour
                 loseSound.Play();
                 playLoseSound = false;
             }
+
             music.Stop();
             gameOverScreen.SetActive(true);
         }
@@ -117,6 +116,7 @@ public class PlayerManager : MonoBehaviour
                 winSound.Play();
                 playWinSound = false;
             }
+
             levelCompleteScreen.SetActive(true);
         }
 

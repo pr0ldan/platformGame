@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Stars : MonoBehaviour
 {
+    public int numStars;
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.transform.tag == "Player") {           
-            PlayerManager.numberOfStars = PlayerManager.numberOfStars + 3;
-            PlayerPrefs.SetInt("NumberOfStars", PlayerManager.numberOfStars);
+            numStars = numStars + 2;
             PlayerManager.StarSound();
             Destroy(gameObject);
         }

@@ -8,8 +8,11 @@ public class Coin : MonoBehaviour
         if(collision.transform.tag == "Player") {
             PlayerManager.numberOfCoins++;
             PlayerPrefs.SetInt("NumberOfCoins", PlayerManager.numberOfCoins);
+            PlayerPrefs.Save();
+
             PlayerManager.CoinSound();
             Destroy(gameObject);
         }
     }
+
 }

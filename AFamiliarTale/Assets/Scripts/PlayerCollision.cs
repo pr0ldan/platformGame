@@ -13,9 +13,6 @@ public class PlayerCollision : MonoBehaviour
             }
             else //game over
             {
-                PlayerPrefs.SetInt("NumberOfCoins", 0);
-                PlayerPrefs.SetInt("NumberOfStars", 0);
-
                 PlayerManager.isGameOver = true;
             }
 
