@@ -6,6 +6,7 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public AudioSource selectSound;
+    VolumeUpdate volume;
     public void Start() {
         Time.timeScale = 1;
     }

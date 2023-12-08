@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
     public GameObject RemoveCoins;
+    VolumeUpdate volume;
 
     public static bool isGameOver;
     public static bool isLevelComplete;

@@ -27,9 +27,10 @@ public class VolumeUpdate : MonoBehaviour
         Save();
     }
 
-    private void Load()
+    public void Load()
     {
         volSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        ChangeVolume();
     }
 
     private void Save()

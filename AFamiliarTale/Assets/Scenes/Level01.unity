@@ -413,7 +413,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.017384738, y: 0.038864076}
@@ -455,7 +455,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &52047056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13937,7 +13937,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.017384738, y: 0.038864076}
@@ -13979,7 +13979,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &897645192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15372,7 +15372,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.017384738, y: 0.038864076}
@@ -15414,7 +15414,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1046368080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17619,7 +17619,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.017384738, y: 0.038864076}
@@ -17661,7 +17661,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1307306715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17676,7 +17676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
   speed: 3
-  disBetween: 6
+  disBetween: 8
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1307306716
 SpriteRenderer:
@@ -18075,7 +18075,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.017384738, y: 0.038864076}
@@ -18117,7 +18117,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1402210896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22379,7 +22379,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.017384738, y: 0.038864076}
@@ -22421,7 +22421,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1578560459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23989,7 +23989,7 @@ Transform:
   m_GameObject: {fileID: 1755430408}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.607201, y: -14.794001, z: 0}
+  m_LocalPosition: {x: 5.86, y: -13.62, z: 0}
   m_LocalScale: {x: 0.4223, y: 0.5667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24024,7 +24024,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.017384738, y: 0.038864076}
@@ -24066,7 +24066,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1780643554
 GameObject:
   m_ObjectHideFlags: 0
@@ -24611,7 +24611,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.017384738, y: 0.038864076}
@@ -24653,7 +24653,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1827698699
 MonoBehaviour:
   m_ObjectHideFlags: 0
