@@ -666,7 +666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEVEL COMPLETE!
+  m_text: YOU MADE IT HOME!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -2031,7 +2031,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 2.4}
-  m_Size: {x: 2.4, y: 4.8}
+  m_Size: {x: 2, y: 4.8}
   m_Direction: 0
 --- !u!50 &238294719
 Rigidbody2D:
@@ -3173,7 +3173,7 @@ Transform:
   m_GameObject: {fileID: 386920310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.576096, y: -3.3907475, z: -10}
+  m_LocalPosition: {x: -9.808331, y: -3.3907475, z: -10}
   m_LocalScale: {x: 0.9966426, y: 0.9966426, z: 0.9966426}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3278,7 +3278,7 @@ Transform:
   m_GameObject: {fileID: 397296235}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.576096, y: -3.3907475, z: -10}
+  m_LocalPosition: {x: -9.808331, y: -3.3907475, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
