@@ -112,6 +112,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Update() {
         coinsText.text = numberOfCoins.ToString();
+        starsText.text = numberOfStars.ToString();
 
         if(isGameOver)
         {

@@ -25,10 +25,19 @@ public class PlayerLife : MonoBehaviour
             currentHealth--;
             if (currentHealth <= 0)
             {
+                PlayerManager.numberOfCoins = PlayerManager.numberOfCoins - 3;
+
+                if (PlayerManager.numberOfCoins < 0) {
+                    PlayerPrefs.SetInt("NumberOfCoins", 0);
+                    PlayerPrefs.Save();
+                }
+                else {
+                    PlayerPrefs.SetInt("NumberOfCoins", PlayerManager.numberOfCoins);
+                    PlayerPrefs.Save();
+                }
+
                 //gameObject.transform.tag = "End";
                 Destroy(gameObject);
-                PlayerPrefs.SetInt("NumberOfCoins", 0);
-                PlayerPrefs.SetInt("NumberOfStars", 0);
                 PlayerManager.isGameOver = true;
             }
             Update() ;
