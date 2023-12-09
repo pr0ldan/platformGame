@@ -120,6 +120,7 @@ public class PlayerManager : MonoBehaviour
                 playLoseSound = false;
             }
             music.Stop();
+            PlayerManager.lastCheckpointPos = new Vector2(-12f, -5f);
             gameOverScreen.SetActive(true);
         }
         else if (isLevelComplete)
