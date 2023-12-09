@@ -6,12 +6,15 @@ public class EnemyChase : MonoBehaviour
 {
     //sets what enemy will chase
     public GameObject player;
+    public GameObject enemy;
 
     //adjustable speed
     public float speed;
 
     //adjustable chase distance
     public int disBetween;
+
+    public int health;
 
     //for enemy return
     public Vector3 start;
@@ -22,6 +25,7 @@ public class EnemyChase : MonoBehaviour
     void Start()
     {
         start = transform.position;
+        health = 1;
     }
 
     // Update is called once per frame
@@ -52,5 +56,18 @@ public class EnemyChase : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (enemy.CompareTag("Trap") == collision.gameObject.CompareTag("Bullet"))
+        {
+            health--;
+            print(health);
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

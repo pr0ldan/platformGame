@@ -2743,8 +2743,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 370771413}
   speed: 1
   disBetween: 7
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &370771416
 SpriteRenderer:
@@ -3022,8 +3024,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 379449612}
   speed: 2
   disBetween: 6
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &379449615
 SpriteRenderer:
@@ -3209,7 +3213,7 @@ Transform:
   m_GameObject: {fileID: 386920310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.808331, y: -3.3907475, z: -10}
+  m_LocalPosition: {x: -9.582482, y: -3.3907475, z: -10}
   m_LocalScale: {x: 0.9966426, y: 0.9966426, z: 0.9966426}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3314,7 +3318,7 @@ Transform:
   m_GameObject: {fileID: 397296235}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.808331, y: -3.3907475, z: -10}
+  m_LocalPosition: {x: -9.582482, y: -3.3907475, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4165,8 +4169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 620767205}
   speed: 3
   disBetween: 7
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &620767208
 SpriteRenderer:
@@ -43100,8 +43106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1290859114}
   speed: 3
   disBetween: 5
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1290859117
 SpriteRenderer:
@@ -46690,8 +46698,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1730636850}
   speed: 3
   disBetween: 5
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1730636853
 SpriteRenderer:
@@ -47955,8 +47965,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1886939856}
   speed: 2
   disBetween: 5
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1886939859
 SpriteRenderer:

@@ -21,6 +21,7 @@ public class PlayerShoot : MonoBehaviour
     void Fire() {
         animator.SetTrigger("Shoot");
         GameObject go = Instantiate(bullet, bulletHole.position, bullet.transform.rotation);
+        bullet.tag = "Bullet";
        
         if(GetComponent<PlayerMovement>().faceRight) {
             go.GetComponent<Rigidbody2D>().AddForce(Vector2.right * force);

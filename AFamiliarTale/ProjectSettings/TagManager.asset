@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - Enemy
   - Turn
+  - Bullet
   layers:
   - Default
   - TransparentFX
