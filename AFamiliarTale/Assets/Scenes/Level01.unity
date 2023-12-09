@@ -1501,6 +1501,7 @@ MonoBehaviour:
   animator: {fileID: 238294720}
   speed: 5
   jumpForce: 6.5
+  faceRight: 1
   groundCheck: {fileID: 1583521829}
   groundLayer:
     serializedVersion: 2
@@ -1641,6 +1642,7 @@ MonoBehaviour:
   animator: {fileID: 238294720}
   bullet: {fileID: 3999539315387554205, guid: 52452982a0a61479e879bfdcfaa98888, type: 3}
   bulletHole: {fileID: 942192316}
+  force: 500
   shootSound: {fileID: 238294727}
 --- !u!114 &238294724
 MonoBehaviour:
@@ -23656,8 +23658,8 @@ Transform:
   m_GameObject: {fileID: 1987677033}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.61, z: 0}
-  m_LocalScale: {x: 2, y: 2.5, z: 1}
+  m_LocalPosition: {x: 0.04, y: 3.58, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 238294722}
@@ -23703,7 +23705,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: 2ca5c3d24eaf84b2b8fa475ead1db628, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c194fdc6bd9724c9d9ed308996b3e849, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
