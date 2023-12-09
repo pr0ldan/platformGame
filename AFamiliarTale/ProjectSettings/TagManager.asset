@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Turn
   - Bullet
+  - Stars
   layers:
   - Default
   - TransparentFX
