@@ -742,8 +742,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -809,8 +809,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -474.24, y: 183}
-  m_SizeDelta: {x: 142.4039, y: 40.7435}
+  m_AnchoredPosition: {x: -430, y: 175}
+  m_SizeDelta: {x: 140, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &130525404
 GameObject:
@@ -896,8 +896,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1733,6 +1733,7 @@ MonoBehaviour:
   animator: {fileID: 238294720}
   speed: 5
   jumpForce: 6.5
+  faceRight: 1
   groundCheck: {fileID: 1583521829}
   groundLayer:
     serializedVersion: 2
@@ -1771,8 +1772,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.4}
-  m_Size: {x: 2.4, y: 4.8}
+  m_Offset: {x: 0, y: 1.8}
+  m_Size: {x: 1.8, y: 3.5}
   m_Direction: 0
 --- !u!50 &238294719
 Rigidbody2D:
@@ -1905,6 +1906,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 238294720}
+  bullet: {fileID: 0}
+  bulletHole: {fileID: 0}
+  force: 500
   shootSound: {fileID: 238294727}
 --- !u!114 &238294724
 MonoBehaviour:
@@ -3205,7 +3209,7 @@ Transform:
   m_GameObject: {fileID: 386920310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.239999, y: -3.3907475, z: -10}
+  m_LocalPosition: {x: -9.808331, y: -3.3907475, z: -10}
   m_LocalScale: {x: 0.9966426, y: 0.9966426, z: 0.9966426}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3310,7 +3314,7 @@ Transform:
   m_GameObject: {fileID: 397296235}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.239999, y: -3.3907475, z: -10}
+  m_LocalPosition: {x: -9.808331, y: -3.3907475, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3566,6 +3570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 521536080}
   - component: {fileID: 521536081}
+  - component: {fileID: 521536082}
   m_Layer: 5
   m_Name: volumeSlider
   m_TagString: Untagged
@@ -3645,7 +3650,32 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 521536082}
+        m_TargetAssemblyTypeName: VolumeUpdate, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &521536082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521536079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20afe5035d53374096a96ce791fa772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volSlider: {fileID: 521536081}
 --- !u!1 &550149346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4591,8 +4621,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &675762915
 GameObject:
@@ -40973,6 +41003,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   speed: 10
   jumpForce: 5
+  faceRight: 1
   groundCheck: {fileID: 0}
   groundLayer:
     serializedVersion: 2
@@ -42232,7 +42263,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 74.04, y: -7.05, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 78147345}
@@ -43835,6 +43866,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   speed: 10
   jumpForce: 5
+  faceRight: 1
   groundCheck: {fileID: 0}
   groundLayer:
     serializedVersion: 2
@@ -46425,7 +46457,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 79.48, y: -4.21, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 78147345}
@@ -46819,7 +46851,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 72.52, y: -4.21, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 78147345}
@@ -48051,7 +48083,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 78.04, y: -7.05, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 78147345}
@@ -48265,7 +48297,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 81.08, y: -7.05, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 78147345}
@@ -49512,7 +49544,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 71.1, y: -7.05, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 78147345}

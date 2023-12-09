@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
     public GameObject RemoveCoins;
+    VolumeUpdate volume;
 
     public static bool isGameOver;
     public static bool isLevelComplete;
@@ -71,7 +72,7 @@ public class PlayerManager : MonoBehaviour
     {
         selectSound.Play();
         yield return new WaitForSecondsRealtime(.13f);
-        PlayerManager.lastCheckpointPos = new Vector2(-7, 0);
+        PlayerManager.lastCheckpointPos = new Vector2(-12f, -5f);
         SceneManager.LoadScene("Menu");
     }
     public void NextLevel()
