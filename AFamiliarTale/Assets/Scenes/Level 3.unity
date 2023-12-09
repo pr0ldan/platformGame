@@ -3173,7 +3173,7 @@ Transform:
   m_GameObject: {fileID: 386920310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.808331, y: -3.3907475, z: -10}
+  m_LocalPosition: {x: -9.582482, y: -3.3907475, z: -10}
   m_LocalScale: {x: 0.9966426, y: 0.9966426, z: 0.9966426}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3278,7 +3278,7 @@ Transform:
   m_GameObject: {fileID: 397296235}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.808331, y: -3.3907475, z: -10}
+  m_LocalPosition: {x: -9.582482, y: -3.3907475, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17592,8 +17592,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1052308031}
   speed: 2
   disBetween: 3
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1052308035
 SpriteRenderer:
@@ -18306,8 +18308,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1126109355}
   speed: 2
   disBetween: 3
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1126109359
 SpriteRenderer:
@@ -19910,8 +19914,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1221674354}
   speed: 1.5
   disBetween: 7
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1221674358
 SpriteRenderer:
@@ -24715,8 +24721,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1772512950}
   speed: 3
   disBetween: 3
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1772512954
 SpriteRenderer:

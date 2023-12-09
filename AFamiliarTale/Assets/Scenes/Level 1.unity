@@ -416,7 +416,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017384738, y: 0.038864076}
+  m_Offset: {x: -0.017384768, y: 0.50469136}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -427,7 +427,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6956942, y: 1.0704538}
+  m_Size: {x: 1.6956942, y: 2.0021083}
   m_EdgeRadius: 0
 --- !u!50 &52047055
 Rigidbody2D:
@@ -469,8 +469,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 52047052}
   speed: 3
   disBetween: 6
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &52047057
 SpriteRenderer:
@@ -3134,7 +3136,7 @@ Transform:
   m_GameObject: {fileID: 386920310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.476699, y: -0.54744756, z: -10.0026}
+  m_LocalPosition: {x: -8.849979, y: -0.54744756, z: -10.0026}
   m_LocalScale: {x: 0.9966426, y: 0.9966426, z: 0.9966426}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3239,7 +3241,7 @@ Transform:
   m_GameObject: {fileID: 397296235}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.476699, y: -0.54744756, z: -10.0026}
+  m_LocalPosition: {x: -8.849979, y: -0.54744756, z: -10.0026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14073,7 +14075,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017384738, y: 0.038864076}
+  m_Offset: {x: -0.017384768, y: 0.4603557}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14084,7 +14086,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6956942, y: 1.0704538}
+  m_Size: {x: 1.6956942, y: 1.913437}
   m_EdgeRadius: 0
 --- !u!50 &897645191
 Rigidbody2D:
@@ -14126,8 +14128,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 897645188}
   speed: 3
   disBetween: 6
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &897645193
 SpriteRenderer:
@@ -15419,9 +15423,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 942192316}
+  - component: {fileID: 942192317}
   m_Layer: 0
   m_Name: bulletHole
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15441,6 +15446,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 238294722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &942192317
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942192315}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.033420846, y: -0.48365605}
+  m_Size: {x: 0.75307655, y: 2.1148934}
+  m_Direction: 0
 --- !u!1 &1046368076
 GameObject:
   m_ObjectHideFlags: 0
@@ -15508,7 +15548,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017384738, y: 0.038864076}
+  m_Offset: {x: -0.017384768, y: 0.42039233}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15519,7 +15559,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6956942, y: 1.0704538}
+  m_Size: {x: 1.6956942, y: 1.8335105}
   m_EdgeRadius: 0
 --- !u!50 &1046368079
 Rigidbody2D:
@@ -15561,8 +15601,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1046368076}
   speed: 3
   disBetween: 6
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1046368081
 SpriteRenderer:
@@ -17755,7 +17797,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017384738, y: 0.038864076}
+  m_Offset: {x: -0.017384768, y: 0.44145846}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17766,7 +17808,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6956942, y: 1.0704538}
+  m_Size: {x: 1.6956942, y: 1.8756428}
   m_EdgeRadius: 0
 --- !u!50 &1307306714
 Rigidbody2D:
@@ -17808,8 +17850,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1307306711}
   speed: 3
   disBetween: 8
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1307306716
 SpriteRenderer:
@@ -18211,7 +18255,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017384738, y: 0.038864076}
+  m_Offset: {x: -0.017384768, y: 0.433504}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -18222,7 +18266,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6956942, y: 1.0704538}
+  m_Size: {x: 1.6956942, y: 1.8597329}
   m_EdgeRadius: 0
 --- !u!50 &1402210895
 Rigidbody2D:
@@ -18264,8 +18308,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1402210892}
   speed: 3
   disBetween: 5
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1402210897
 SpriteRenderer:
@@ -22515,7 +22561,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017384738, y: 0.038864076}
+  m_Offset: {x: -0.017384768, y: 0.44370216}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -22526,7 +22572,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6956942, y: 1.0704538}
+  m_Size: {x: 1.6956942, y: 1.8801299}
   m_EdgeRadius: 0
 --- !u!50 &1578560458
 Rigidbody2D:
@@ -22568,8 +22614,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1578560455}
   speed: 3
   disBetween: 6
+  health: 1
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1578560460
 SpriteRenderer:
@@ -24058,8 +24106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1755430408}
   speed: 2
   disBetween: 3
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1755430410
 SpriteRenderer:
@@ -24160,7 +24210,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017384738, y: 0.038864076}
+  m_Offset: {x: -0.017384768, y: 0.486451}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24171,7 +24221,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6956942, y: 1.0704538}
+  m_Size: {x: 1.6956942, y: 2.17886}
   m_EdgeRadius: 0
 --- !u!50 &1755430413
 Rigidbody2D:
@@ -24747,7 +24797,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017384738, y: 0.038864076}
+  m_Offset: {x: -0.017384768, y: 0.43616402}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24758,7 +24808,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6956942, y: 1.0704538}
+  m_Size: {x: 1.6956942, y: 1.8650537}
   m_EdgeRadius: 0
 --- !u!50 &1827698698
 Rigidbody2D:
@@ -24800,8 +24850,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238294716}
+  enemy: {fileID: 1827698695}
   speed: 2
   disBetween: 3
+  health: 0
   start: {x: 0, y: 0, z: 0}
 --- !u!212 &1827698700
 SpriteRenderer:
