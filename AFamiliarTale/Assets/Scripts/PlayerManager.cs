@@ -41,6 +41,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake() {
         numberOfCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
+        numberOfStars = PlayerPrefs.GetInt("NumberOfStars", 0);
 
         isGameOver = false;
         isLevelComplete = false;
@@ -131,6 +132,7 @@ public class PlayerManager : MonoBehaviour
                 playWinSound = false;
             }
 
+            PlayerPrefs.SetInt("NumberOfStars", PlayerManager.numberOfStars);
             PlayerPrefs.SetInt("NumberOfCoins", PlayerManager.numberOfCoins);
             PlayerPrefs.Save();
             levelCompleteScreen.SetActive(true);
