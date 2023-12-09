@@ -21,13 +21,21 @@ public class ChestOpener : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D collision) {
-        ChestClose.SetActive(false);
-        ChestOpen.SetActive(true);
-        Star.SetActive(true);
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            ChestClose.SetActive(false);
+            ChestOpen.SetActive(true);
+            Star.SetActive(true);
+        }  
     }
 
-    void OnTriggerExit2D(Collider2D collision) {
-        Destroy(Star);
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            Destroy(Star);
+        }
     }
 }
