@@ -6,7 +6,7 @@ Paulina Roldan
 David Rubio
 Brandon Vojtkofsky
 
-Compile Instructions:
+Compile Instructions: (Requires Unity 2022.3.10f1)
 - Download repository code
 - Import into Unity Hub
 - Open project in Unity
